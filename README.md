@@ -15,3 +15,10 @@ Install the dependencies and start the server
 npm install
 npm start
 ```
+## Usage
+
+Type in the category of your choice in the search bar to create a list
+
+Add items to the list by clicking on the "+" 
+
+You can modify any item or list at any time
