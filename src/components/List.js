@@ -23,7 +23,7 @@ class List extends React.Component {
   submit() {
 
     // If we're adding an item to the list...
-    if (this.state.mode == "Add")
+    if (this.state.mode === "Add")
     {
       // increment the next unique ID, set the input textbox to blank, and put 
       // the item into the list, see the handy "..." syntax explained here:
@@ -66,12 +66,12 @@ class List extends React.Component {
     // Only allow deleting an item if we aren't currently editing an item, 
     // otherwise our method of editing based on items array index will break, 
     // and it's probably not a good idea regardless.
-    if (this.state.mode != "Edit")
+    if (this.state.mode !== "Edit")
     {
       // Delete the item with ID delID by filtering out the item using filter:
       // https://www.w3schools.com/jsref/jsref_filter.asp
       this.setState({ 
-        items: this.state.items.filter( ({item,id}) => id != delID )
+        items: this.state.items.filter( ({item,id}) => id !== delID )
       })
     }    
   }
@@ -81,7 +81,7 @@ class List extends React.Component {
 
     // Get the item to edit itself from the items array based on the id, using 
     // find: https://www.w3schools.com/jsref/jsref_find.asp
-    var editItem = this.state.items.find( ({item,id}) => id == editID );
+    var editItem = this.state.items.find( ({item,id}) => id === editID );
 
     // Set input to the edit item text, set mode to Edit, set editIndex to be 
     // the index in the items array of the item we are editing (so we can 
