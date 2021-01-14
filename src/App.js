@@ -30,7 +30,7 @@ class App extends React.Component {
   // delete list
   handleDeleteList(delID){
     this.setState({ 
-      inputList: this.state.inputList.filter( ({list,id}) => id != delID )
+      inputList: this.state.inputList.filter( ({list,id}) => id !== delID )
     })
   }
 
